@@ -66,9 +66,9 @@ class ArticleModel extends CActiveRecord
          * @return type
          */
         public static function getCountComments($articleId){
-            $comment = CommentModel::model()->findAllByAttributes(array('acrticleId' => $articleId,'status'=>'cheked'));
+            $comment = CommentModel::model()->findAllByAttributes(array('acrticleId' => $articleId,'status'=>true));
             if($comment) {
-                return count($comment)." Comments ";
+                return count($comment) . " Comments ";
             }
         }
 
