@@ -33,8 +33,8 @@
                                 array('label' => 'Contact', 'url' => array('/site/contact')),
                                 array('label' => 'Registration', 'url' => array('/site/register'),'visible' => Yii::app()->user->isGuest),
                                 array('label' => 'Login', 'url' => array('/site/login'),'visible' => Yii::app()->user->isGuest),
-                                array('label' => 'Exit ('.Yii::app()->user->name.')', 'url' => array('/site/logout'),'visible' => !Yii::app()->user->isGuest),
                                 array('label' => 'My Profile', 'url' =>Yii::app()->createUrl('/site/profile', array('userId' => Yii::app()->user->getId())),'visible' => !Yii::app()->user->isGuest),
+                                array('label' => 'Exit ('.Yii::app()->user->name.')', 'url' => array('/site/logout'),'visible' => !Yii::app()->user->isGuest),
                             ),
                         ));
                         ?>

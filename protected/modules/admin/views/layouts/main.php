@@ -24,9 +24,10 @@
             <?php 
             $this->widget(
             'application.extensions.yiibooster.widgets.TbNavbar', array(
-        'brand' => 'Blog about travel',
-        'fixed' => false,
-        'items' => array(
+            'brand' => 'Blog about travel',
+            'brandUrl' => $this->createUrl('block/admin'),
+            'fixed' => true,
+            'items' => array(
             array(
                 'class' => 'application.extensions.yiibooster.widgets.TbMenu',
                 'items' => array(
