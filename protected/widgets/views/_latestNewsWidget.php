@@ -2,7 +2,7 @@
     <ul class="recent_comm">
         <?php foreach ($model as $article): ?>
             <li>
-                <a href="<?php echo Yii::app()->createAbsoluteUrl('blog/readArticle/',array('articleid' =>$article->id )) ?>"><img src="<?php echo ArticleModel::getImagePath($article->id); ?>" width="67" height="63" alt="" class="pic_left" />
+                <a href="<?php echo Yii::app()->createAbsoluteUrl('blog/readArticle/',array('articleid' =>$article->id )) ?>"><img src="<?php echo Image::getImage(get_class($article),$article->id); ?>" width="67" height="63" alt="" class="pic_left" />
                     <?php echo $article->shirtDesc; ?><span class="date">June 12, 2010</span></a>
             </li>
         <?php endforeach; ?>

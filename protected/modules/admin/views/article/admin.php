@@ -47,7 +47,7 @@ $this->widget('application.extensions.yiibooster.widgets.TbGridView', array(
                 ),
                 array(
                     'name'  => 'image',
-                    'value' => '$data->getImagePath($data->id)',
+                    'value' => 'Image::getImage(ArticleModel,$data->id)',
                     'type'  => 'image',
                     'htmlOptions'=>array('class'=>'avatar'),
                 ),

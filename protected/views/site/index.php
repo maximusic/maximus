@@ -13,25 +13,22 @@
 </div>
 <div class="content spr">
     <div class="cont">
-        <?php echo $this->getBlockByTitle('about'); ?>
+        <?php echo $this->getBlockByTitle('fast'); ?>
         <div class="line"></div>
-
         <div class="col1">
-            <p><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/pic1.jpg" width="250" height="82" alt="" class="pic" /></p>
-            <?php echo $this->getBlockByTitle('col1'); ?>
-            <div class="row"><a href="<?php echo $this->getBlockByTitle('col1', 'buttonLink'); ?>" class="more"><b></b><?php echo $this->getBlockByTitle('col1', 'buttonName'); ?></a></div>
+            <?php echo $this->getBlockByTitle('secure'); ?>
+            <div class="row"><a href="<?php echo $this->getBlockByTitle('secure', 'buttonLink'); ?>" class="more"><b></b><?php echo $this->getBlockByTitle('secure', 'buttonName'); ?></a></div>
         </div>
         <div class="col2">
-            <p><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/pic2.jpg" width="250" height="82" alt="" class="pic" /></p>
-            <?php echo $this->getBlockByTitle('col2'); ?>
-            <div class="row"><a href="<?php echo $this->getBlockByTitle('col2', 'buttonLink'); ?>" class="more"><b></b><?php echo $this->getBlockByTitle('col2', 'buttonName'); ?></a></div>
+            <?php echo $this->getBlockByTitle('professional'); ?>
+            <div class="row"><a href="<?php echo $this->getBlockByTitle('professional', 'buttonLink'); ?>" class="more"><b></b><?php echo $this->getBlockByTitle('professional', 'buttonName'); ?></a></div>
         </div>
         <div class="clear"></div>
     </div>
     <div class="sidebar">
         <?php
         $this->widget('application.widgets.LatestNewsWidget', array(
-            'limit' => 3
+            'limit' => 2
         ));
         ?>
     </div>
@@ -39,9 +36,6 @@
 </div>
 
 <div id="footer_sidebar">
-    <div class="footer_sidebar_cont">
-        <?php echo $this->getBlockByTitle('why'); ?>
-    </div>
 </div>
 <!-- End Content -->
 

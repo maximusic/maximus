@@ -255,7 +255,7 @@ a.logo			{
     outline:none;
     position:relative;
     float:left;
-    margin:5px 0 4px 22px;
+    margin:10px 0 4px 22px;
     background:url(../images/logo.png) 0 0 no-repeat; /*put logo image here*/
     z-index:1000;
 }
@@ -1679,4 +1679,38 @@ ul.yiiPager .selected a {
     width:470px;
     padding:3px;
     *margin-top:8px;
+}
+h3.professional {
+    background: url("/images/fsp.png") no-repeat scroll 0 -117px rgba(0, 0, 0, 0);
+}
+.professional {
+    color: #3B6FBA;
+    
+}
+h3.professional {
+    line-height: 36px;
+    padding-left: 52px;
+}
+h3.secure {
+    background: url("/images/fsp.png") no-repeat scroll 0 -59px rgba(0, 0, 0, 0);
+}
+h3.secure {
+    color: #16A314;
+    
+}
+h3.secure {
+    line-height: 36px;
+    padding-left: 52px;
+}
+
+h3.fast {
+    background: url("/images/fsp.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+h3.fast {
+    color: #D8582B;
+    
+}
+h3.fast {
+    line-height: 39px;
+    padding-left: 55px;
 }

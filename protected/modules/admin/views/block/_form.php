@@ -25,13 +25,55 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'content'); ?>
-		<?php echo $form->textArea($model,'content',array('rows'=>6, 'cols'=>50)); ?>
+		 <?php
+            $this->widget(
+                    'application.extensions.yiibooster.widgets.TbRedactorJs', [
+                'model' => $model,
+                'attribute' => 'content',
+                'value' => 'content',
+                'editorOptions' => [
+                        'plugins' => ['fontfamily','clips']
+                ]
+                    ]
+            );
+            ?>
 		<?php echo $form->error($model,'content'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'image'); ?>
-		<?php echo $form->textField($model,'image',array('size'=>60,'maxlength'=>250)); ?>
+		<div class="pi-row avatar-row">
+                <?php echo $form->hiddenField($model, 'image'); ?>
+                <img id="afterUploadPreview" src="<?php echo $model->getFileSrc('image') ?>" width="222">
+            </div>
+                <?php
+                $this->widget('ext.cocoCod.CocoCodWidget'
+                    , array(
+                        'id' => 'cocowidget1',
+                        'onCompleted' => 'function(id,filename,jsoninfo){ $("#BlockModel_image").val(filename); $("#afterUploadPreview").attr("src",jsoninfo.uploadUrl)}',
+                        'onCancelled' => 'function(id,filename){ alert("cancelled"); }',
+                        'onMessage' => 'function(m){ alert(m); }',
+                        'allowedExtensions' => array('jpeg', 'jpg', 'gif', 'png'), // server-side mime-type validated
+                        'sizeLimit' => 2000000, // limit in server-side and in client-side
+                        'uploadDir' => Yii::getPathOfAlias('webroot') . '/uploads/temp/', // coco will @mkdir it
+                        'uploadUrl' => Yii::app()->getBaseUrl(true) . '/uploads/temp/', // coco will @mkdir it
+// this arguments are used to send a notification
+// on a specific class when a new file is uploaded,
+                        'receptorClassName' => 'application.models.BlockModel',
+                        'methodName' => 'onFileUploaded',
+                        'userdata' => array(),
+                        // controls how many files must be uploaded
+                        'maxUploads' => -1, // defaults to -1 (unlimited)
+                        'maxUploadsReachMessage' => 'No more files allowed', // if empty, no message is shown
+// controls how many files the can select (not upload, for uploads see also: maxUploads)
+                        'multipleFileSelection' => true, // true or false, defaults: true
+                        'buttonText' => 'Upload photo',
+                        'dropFilesText' => 'Upload or Drop here',
+                        'htmlOptions' => array('style' => 'width: 300px;'),
+                        'defaultControllerName' => 'admin/block',
+                        //'defaultActionName' => 'coco',
+                    ));
+                ?>
 		<?php echo $form->error($model,'image'); ?>
 	</div>
 

@@ -10,7 +10,7 @@
         </style>
         <!-- Initialise jQuery Library -->
         <?php Yii::app()->clientScript->registerCoreScript('jquery');   ?>
-        <title>Maximus | Home page</title>
+        <title>Yii Articles</title>
     </head>
     <body>
        <?php
@@ -21,7 +21,7 @@
         <div id="wide" class="container">
             <div id="top">
                 <div class="wrap">
-                    <a href="<?php echo Yii::app()->createAbsoluteUrl("/"); ?>" class="logo" title="Maximus"></a>
+                    <a href="<?php echo Yii::app()->createAbsoluteUrl("/"); ?>" class="logo" title="Yii"></a>
                     <div id="menu">
                         <?php
                         $this->widget('zii.widgets.CMenu', array(

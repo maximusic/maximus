@@ -26,7 +26,7 @@
             in <?php echo $article->category->title; ?>  on May 30, 2010  |  <?php echo ArticleModel::getCountComments($article->id); ?> &raquo; 
             <span class="post_like"><?php if (!Yii::app()->user->isGuest): ?>
                     Like <i id="like_icon"></i><i class="like"><?php echo LikesModel::getLikes($article->id); ?></i></span><?php endif; ?></div>
-        <p><?php echo CHtml::image(ArticleModel::getImagePath($article->id), $alt = "", array('id' => 'blogImage', 'class' => 'pic')); ?></p>
+        <p><?php echo CHtml::image(Image::getImage(get_class($article),$article->id), $alt = "", array('id' => 'blogImage', 'class' => 'pic')); ?></p>
         <p><?php echo $article->content; ?></p>
         <!-- ================== Start Comments Block ========================= -->
         <div class="line"></div>

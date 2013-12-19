@@ -20,6 +20,24 @@ class BlockController extends Controller {
         );
     }
 
+    public function actions()
+	{
+		return array(
+			// captcha action renders the CAPTCHA image displayed on the contact page
+			'captcha'=>array(
+				'class'=>'CCaptchaAction',
+				'backColor'=>0xFFFFFF,
+			),
+			// page action renders "static" pages stored under 'protected/views/site/pages'
+			// They can be accessed via: index.php?r=site/page&view=FileName
+			'page'=>array(
+				'class'=>'CViewAction',
+			),
+                    'cocoCod' => array(
+                'class' => 'CocoCodAction',
+            ),
+		);
+	}
     /**
      * Specifies the access control rules.
      * This method is used by the 'accessControl' filter.
@@ -28,7 +46,7 @@ class BlockController extends Controller {
     public function accessRules() {
         return array(
             array('allow',
-                'actions' => array('index', 'create', 'update', 'admin', 'view', 'delete'),
+                'actions' => array('index', 'create', 'update', 'admin', 'view', 'delete','cocoCod'),
                 'roles' => array('admin'),
             ),
             array('deny', // deny all users

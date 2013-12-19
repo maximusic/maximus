@@ -40,7 +40,12 @@ $this->widget('application.extensions.yiibooster.widgets.TbExtendedGridView', ar
             'name' => 'content',
             'value' => 'TruncateText::truncate($data->content,array(limit => 50))',
         ),
-        'image',
+         array(
+                    'name'  => 'image',
+                    'value' => 'Image::getImage(BlockModel,$data->id)',
+                    'type'  => 'image',
+                    'htmlOptions'=>array('class'=>'avatar'),
+                ),
         'buttonLink',
         'buttonName',
         'pageName',
