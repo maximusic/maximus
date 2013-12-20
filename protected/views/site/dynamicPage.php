@@ -1,17 +1,22 @@
 <!-- Begin Breadcrumbs -->
 <div id="breadcrumbs">
-    <ul>
-        <li class="first"><a href="./index.html" title="Home">Home</a></li>
-        <li><?php echo $page->title; ?></li>
-    </ul>
+    <?php $this->widget('zii.widgets.CBreadcrumbs', array(
+	'links' => array(
+		'Home' => '/',
+		"$page->title",
+	),
+	'homeLink' => false,
+	'separator' => '',
+	'tagName' => 'ul',
+	'inactiveLinkTemplate' => '<li><span>{label}</span></li>',
+	'activeLinkTemplate' => '<li><a href="{url}">{label}</a> <span class="divider"></span></li>',
+));?><!-- breadcrumbs -->
     <div class="clear"></div>
 </div>
 
 <!-- End Breadcrumbs -->
 <!-- Begin Content -->
 <div class="<?php echo $class; ?>">
-    
-    <h2><?php echo $page->title; ?></h2>
     <?php echo $page->content; ?>
 </div>
 

@@ -1451,15 +1451,15 @@ a:hover.reply_comment	{
 }
 
 a.ico_rss		{background:url(../images/ico_rss.png) 0 0 no-repeat;}
-a.ico_rss .hover{background:url(../images/ico_rss.png) 0 -25px no-repeat;}
+a.ico_rss:hover{background:url(../images/ico_rss.png) 0 -25px no-repeat;}
 a.ico_delicious	{background:url(../images/ico_delicious.png) 0 0 no-repeat;}
-a.ico_delicious .hover	{background:url(../images/ico_delicious.png) 0 -25px no-repeat;}
+a.ico_delicious:hover	{background:url(../images/ico_delicious.png) 0 -25px no-repeat;}
 a.ico_fliÑkr	{background:url(../images/ico_flickr.png) 0 0 no-repeat;}
-a.ico_fliÑkr .hover	{background:url(../images/ico_flickr.png) 0 -25px no-repeat;}
+a.ico_fliÑkr:hover	{background:url(../images/ico_flickr.png) 0 -25px no-repeat;}
 a.ico_twitter	{background:url(../images/ico_twitter.png) 0 0 no-repeat;}
-a.ico_twitter .hover	{background:url(../images/ico_twitter.png) 0 -25px no-repeat;}
+a.ico_twitter:hover	{background:url(../images/ico_twitter.png) 0 -25px no-repeat;}
 a.ico_facebook	{background:url(../images/ico_facebook.png) 0 0 no-repeat;}
-a.ico_facebook .hover	{background:url(../images/ico_facebook.png) 0 -25px no-repeat;}
+a.ico_facebook:hover	{background:url(../images/ico_facebook.png) 0 -25px no-repeat;}
 
 .hover 			{
     position: absolute;

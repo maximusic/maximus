@@ -21,7 +21,7 @@
         <div id="wide" class="container">
             <div id="top">
                 <div class="wrap">
-                    <a href="<?php echo Yii::app()->createAbsoluteUrl("/"); ?>" class="logo" title="Yii"></a>
+                    <a href="<?php echo Yii::app()->createAbsoluteUrl("/"); ?>" class="logo"></a>
                     <div id="menu">
                         <?php
                         $this->widget('zii.widgets.CMenu', array(
